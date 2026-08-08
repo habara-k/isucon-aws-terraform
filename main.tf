@@ -38,12 +38,13 @@ module "sg" {
 }
 
 module "participant-ec2" {
-  source               = "./modules/ec2"
-  standalone_ami_name  = var.standalone_ami_name
-  standalone_ami_owner = var.standalone_ami_owner
-  subnet_id            = module.subnet.subnet_id
-  security_group_id    = module.sg.security_group_id
-  ec2_members          = var.ec2_members
-  ec2_instance_type    = var.ec2_instance_type
-  ec2_volume_size      = var.ec2_volume_size
+  source                  = "./modules/ec2"
+  standalone_ami_name     = var.standalone_ami_name
+  standalone_ami_owner    = var.standalone_ami_owner
+  subnet_id               = module.subnet.subnet_id
+  security_group_id       = module.sg.security_group_id
+  ec2_members             = var.ec2_members
+  ec2_instance_type       = var.ec2_instance_type
+  ec2_bench_instance_type = var.ec2_bench_instance_type
+  ec2_volume_size         = var.ec2_volume_size
 }

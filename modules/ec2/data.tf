@@ -1,6 +1,6 @@
 data "aws_ami" "standalone_ami" {
-  most_recent      = true
-  owners           = [var.standalone_ami_owner]
+  most_recent = true
+  owners      = [var.standalone_ami_owner]
 
   filter {
     name   = "state"

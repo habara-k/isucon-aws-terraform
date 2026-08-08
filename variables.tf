@@ -23,7 +23,7 @@ variable "vpc_net_mask" {
 }
 
 variable "ec2_members" {
-  type = map
+  type = map(any)
   default = { # デフォルトではベンチマーカー役も含んだ4台のEC2が同じAMIで構築される
     "0" = "worker-01"
     "1" = "worker-02"
@@ -37,6 +37,12 @@ variable "ec2_instance_type" {
   type        = string
   default     = "t2.micro"
   description = "EC2 instance type"
+}
+
+variable "ec2_bench_instance_type" {
+  type        = string
+  default     = ""
+  description = "EC2 instance type for the last ec2_members entry (benchmark instance). 空文字ならec2_instance_typeを使う"
 }
 
 variable "ec2_volume_size" {
