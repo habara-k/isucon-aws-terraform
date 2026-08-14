@@ -8,3 +8,4 @@ variable "ec2_bench_instance_type" {
   default = ""
 }
 variable "ec2_volume_size" {}
+variable "ec2_volume_type" {}

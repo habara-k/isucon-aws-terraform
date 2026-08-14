@@ -50,3 +50,8 @@ variable "ec2_volume_size" {
   default     = 20
   description = "EC2 EBS volume size"
 }
+
+variable "ec2_volume_type" {
+  type        = string
+  description = "EC2 EBS volume type. terraform.tfvars.jsonで明示指定必須(gp3推奨。\"standard\"は旧世代MagneticでサイズによらずrootIOPSが低くDB用途に不向きなため避けること)"
+}

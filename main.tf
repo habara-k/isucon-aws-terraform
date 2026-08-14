@@ -47,4 +47,5 @@ module "participant-ec2" {
   ec2_instance_type       = var.ec2_instance_type
   ec2_bench_instance_type = var.ec2_bench_instance_type
   ec2_volume_size         = var.ec2_volume_size
+  ec2_volume_type         = var.ec2_volume_type
 }

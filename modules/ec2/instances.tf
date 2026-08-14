@@ -17,7 +17,7 @@ resource "aws_instance" "participant-instance" {
   security_groups             = [var.security_group_id]
 
   root_block_device {
-    volume_type           = "standard"
+    volume_type           = var.ec2_volume_type
     volume_size           = var.ec2_volume_size
     delete_on_termination = true
   }
